@@ -1,0 +1,37 @@
+[begin] (fluxbox)
+    [exec] (Firefox) {firefox}
+    [exec] (Xterm) {xterm -fa 'Mono' -fs 9}
+    [exec] (Terminator) {terminator}
+    [exec] (run) {fbrun}  # opens a Fluxbox runbox to launch apps
+    [exec] (Dict) {gnome-dictionary}
+	[exec] (Calc) {gnome-calculator}
+    [nop]
+    [submenu] (interwebs) # creates a submenu named interwebs
+        [exec] (Firefox) {firefox}
+        [exec] (Pidgin) {pidgin}
+        [exec] (Skype)  {skype}
+		[exec] (Xchat) {xchat}
+    [end] # ends the submenu
+    [submenu] (Editors)
+        [exec] (Gvim) {gvim}
+        [exec] (Emacs) {emacs}
+        [exec] (GEdit) {gedit}
+    [end]
+    [submenu] (Graphics)
+        [exec] (Inkscape) {inkscape}
+        [exec] (Gimp) {gimp}
+        [exec] (Skencil) {skencil}
+    [end]
+    [submenu] (fluxbox)
+        [submenu] (styles)  # creates a “styles” (for themes) submenu inside the
+            [stylesdir] (/usr/share/fluxbox/styles) # adds all system themes
+            [stylesdir] (~/.fluxbox/styles) # adds all themes in user’s dir
+        [end]
+        [submenu] (tools)
+            [exec] (fluxkeys) {fluxkeys}
+            [exec] (fluxconf) {fluxconf}
+            [exec] (fluxmenu) {fluxmenu}
+        [end] # end tools submenu
+    [end] # end fluxbox submenu
+    [exec] (Quit) {exitflux}
+[end] # ends the menu overall
