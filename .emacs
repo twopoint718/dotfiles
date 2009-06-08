@@ -10,7 +10,7 @@
 
 (setq x-alt-keysym 'meta)                           ; swap meta
 
-(setq indent-tabs-mode nil)                         ; use spaces for indent'n
+(setq-default indent-tabs-mode nil)                 ; use spaces for indent'n
 
 ;; Backup file placement-------------------------------------------------------
 
